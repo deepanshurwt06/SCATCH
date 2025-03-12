@@ -21,10 +21,10 @@ if(process.env.NODE_ENV === 'development'){
     })
 }
 
-router.get("/",(req,res)=>{
-    res.send("this is owners route");
+router.get("/admin",(req,res)=>{
+   const success =  req.flash("success")
+   res.render("createproducts" ,{success})
 })
-
 
 
 module.exports = router;
